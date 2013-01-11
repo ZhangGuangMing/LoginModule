@@ -1,0 +1,79 @@
+body{
+	font-family : Arial;
+	font-size : 13px;
+	color:#333333;
+}
+
+#my-button{
+	cursor:pointer;
+}
+
+#loginPopup { 
+	display: none;
+	background-color:#FFF;
+    left: 474.5px;
+    top: 100px;
+	height: 470px;
+    width: 400px;
+	margin-top:10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.closePopup{
+	width: 20px;
+	height: 20px;
+	right: 10px;
+	top: 0;
+	position:absolute;
+	cursor:pointer;
+}
+
+.css3button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	padding: 10px 20px;
+	cursor:pointer;
+	background: -moz-linear-gradient(
+		top,
+		#f0a40c 0%,
+		#fdb32b);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#f0a40c),
+		to(#fdb32b));
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #e3a125;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.5);
+	text-shadow:
+		0px -1px 0px rgba(255,255,255,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+.title1{
+	text-align:center;
+	color:#6D1AC1;
+}
+
+.link a{
+	text-decoration:none;
+	color:#069;
+}
+
+.link a:hover{
+	text-decoration:underline;
+	color:#008CDC;
+}
+
