@@ -30,10 +30,34 @@
 function CheckError()
 {
 	myFrmObj = document.frmLogin;
-	if(myFrmObj.name.value == "" || myFrmObj.location.value == "" || myFrmObj.email.value == "" || myFrmObj.FBname.value == "" || myFrmObj.password.value == "")
+	if(myFrmObj.name.value == "")
 	{
-		window.alert("Please check again");
+		window.alert("Please check name again");
 		myFrmObj.name.focus();
+		return false;
+	}
+	if(myFrmObj.location.value == "")
+	{
+		window.alert("Please check location again");
+		myFrmObj.location.focus();
+		return false;
+	}
+	if(myFrmObj.email.value == "")
+	{
+		window.alert("Please check email again");
+		myFrmObj.email.focus();
+		return false;
+	}
+	if(myFrmObj.FBname.value == "")
+	{
+		window.alert("Please check nick name again");
+		myFrmObj.FBname.focus();
+		return false;
+	}
+	if(myFrmObj.password.value == "")
+	{
+		window.alert("Please check password again");
+		myFrmObj.password.focus();
 		return false;
 	}           
 	if(!myFrmObj.agree.checked)   
