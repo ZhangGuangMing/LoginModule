@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 09. Jan 2013 um 09:22
+-- Erstellungszeit: 15. Jan 2013 um 22:52
 -- Server Version: 5.5.16
 -- PHP-Version: 5.3.8
 
@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `minifb`
 --
-CREATE DATABASE `minifb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `minifb`;
+CREATE DATABASE `logindb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `logindb`;
 
 -- --------------------------------------------------------
 
@@ -38,7 +38,28 @@ CREATE TABLE IF NOT EXISTS `account` (
   `FBname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+--
+-- Daten für Tabelle `account`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `sessions` (
+  `session_id` varchar(32) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `session_data` text COLLATE utf8_unicode_ci NOT NULL,
+  `session_expiration` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`session_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `sessions`
+--
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

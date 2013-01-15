@@ -6,7 +6,7 @@ class DataProvider
 		$connection = mysql_connect("localhost","root","") or
 			die ("couldn't connect to localhost");
 			
-		mysql_select_db("minifb",$connection);
+		mysql_select_db("logindb",$connection);
 				
 		mysql_query("set names 'utf8'");
 		
