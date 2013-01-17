@@ -15,6 +15,12 @@
 	$email = $_REQUEST["email"];
 	$FBname = $_REQUEST["FBname"];
 	$password = $_REQUEST["password"];
+	
+	$agent=$_SERVER['HTTP_USER_AGENT'];
+	$ip=$_SERVER['REMOTE_ADDR'];
+	$my_t=getdate(date("U"));
+	$time="$my_t[month] $my_t[mday], $my_t[year]";
+	
 	$AccBUS = new AccBUS();
 	$AccDTO = new AccDTO();
 	$AccDTO->Setname($name);
@@ -24,6 +30,9 @@
 	$AccDTO->Setemail($email);
 	$AccDTO->SetFBname($FBname);
 	$AccDTO->Setpassword($password);
+	$AccDTO->SetIP($ip);
+	$AccDTO->SetAgent($agent);
+	$AccDTO->SetLoginDay($time);
 	$AccBUS->Insert($AccDTO);
 	header("location:../index.php");
 

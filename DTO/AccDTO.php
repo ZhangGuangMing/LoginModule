@@ -8,6 +8,11 @@
 		var $email;
 		var $FBname;
 		var $password;
+		var $IP;
+		var $Agent;
+		var $LoginDay;
+		var $LoginPerDay;
+		var $LoginPerWeek;
 	
 		function __construct(){
 			$this->ID = -1 ;
@@ -18,6 +23,11 @@
 			$this->email = "" ;
 			$this->FBname = "" ;
 			$this->password = "" ;
+			$this->IP = "" ;
+			$this->Agent = "" ;
+			$this->LoginDay = "" ;
+			$this->LoginPerDay = -1 ;
+			$this->LoginPerWeek= -1 ;
 		}
 		
 		function SetID($ID){
@@ -52,6 +62,26 @@
 			$this->password=$password;
 		}
 		
+		function SetIP($IP){
+			$this->IP=$IP;
+		}
+		
+		function SetAgent($Agent){
+			$this->Agent=$Agent;
+		}
+		
+		function SetLoginDay($LoginDay){
+			$this->LoginDay=$LoginDay;
+		}
+		
+		function SetLoginPerDay($LoginPerDay){
+			$this->LoginPerDay=$LoginPerDay;
+		}
+		
+		function SetLoginPerWeek($LoginPerWeek){
+			$this->LoginPerWeek=$LoginPerWeek;
+		}
+		
 		function GetID(){
 			return $this->ID;
 		}
@@ -82,6 +112,26 @@
 		
 		function Getpassword(){
 			return $this->password;
+		}
+		
+		function GetIP(){
+			return $this->IP;
+		}
+		
+		function GetAgent(){
+			return $this->Agent;
+		}
+		
+		function GetLoginDay(){
+			return $this->LoginDay;
+		}
+		
+		function GetLoginPerDay(){
+			return $this->LoginPerDay;
+		}
+		
+		function GetLoginPerWeek(){
+			return $this->LoginPerWeek;
 		}
 	}
 ?>

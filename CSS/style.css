@@ -21,6 +21,23 @@ body{
 	border-radius: 10px;
 }
 
+#my-button2{
+	cursor:pointer;
+}
+
+#loginPopup2{ 
+	display: none;
+	background-color:#FFF;
+    left: 474.5px;
+    top: 100px;
+	height: 330px;
+    width: 300px;
+	margin-top:10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
 .closePopup{
 	width: 20px;
 	height: 20px;

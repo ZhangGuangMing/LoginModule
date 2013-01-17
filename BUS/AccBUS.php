@@ -28,5 +28,9 @@
 		function Update(AccDTO $show){
 			return $this->AccDAO->Update($show);
 		}
+		
+		function xlLogin(AccDTO $acc){
+			return $this->AccDAO->xlLogin($acc);
+		}
 	}
 ?>
